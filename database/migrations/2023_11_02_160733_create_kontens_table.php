@@ -10,7 +10,7 @@ class CreateKontensTable extends Migration
     {
         Schema::create('kontens', function (Blueprint $table) {
             $table->string('idVideo', 50);
-            $table->string('idKreator', 50);
+            $table->unsignedBigInteger('idKreator');
             $table->string('videoTitle', 50);
             $table->string('videoDescription', 500);
             $table->string('videoDuration', 50);

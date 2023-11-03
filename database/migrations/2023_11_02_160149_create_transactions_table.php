@@ -9,9 +9,9 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->id();
-            $table->string('idKreator', 50);
-            $table->string('idAudiens', 50);
+            $table->id('id_transactions');
+            $table->unsignedBigInteger('idKreator');
+            $table->string('idAudiens');
             $table->string('rekeningTujuan', 50);
             $table->string('videoTitle', 50);
             $table->string('videoPrice', 50);
@@ -19,8 +19,7 @@ class CreateTransactionsTable extends Migration
             $table->boolean('status');
             $table->timestamps();
 
-            $table->foreign('idKreator')->references('idKreator')->on('kreators');
-            $table->foreign('idAudiens')->references('idAudiens')->on('audiens');
+           
         });
     }
 

@@ -15,6 +15,7 @@ class Audiens extends Model
         'username',
         'noHP',
         'profilePict',
+        //'role'
     ];
 
     public function transactions()

@@ -19,7 +19,7 @@ class CreateKreatorsTable extends Migration
             $table->string('socMed', 128)->nullable();
             $table->string('rekening', 50)->nullable();
             $table->binary('profilPict')->nullable(); // Ubah tipe kolom 'profilPict'
-            //$table->string('role',50);
+            $table->string('role',50);
             $table->timestamps();
         });
     }

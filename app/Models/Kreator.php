@@ -19,7 +19,7 @@ class Kreator extends Model
         'socMed',
         'rekening',
         'profilPict',
-        //'role'
+        'role'
     ];
 
     public function transactions()

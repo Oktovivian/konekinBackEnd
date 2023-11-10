@@ -16,7 +16,7 @@ class CreateAudiensTable extends Migration
             $table->string('noHP', 50);
             $table->binary('profilePict')->nullable(); // Ubah tipe kolom 'profilePict'
             $table->timestamps();
-            //$table->string('role',50);
+            $table->string('role',50);
 
             $table->primary('idAudiens');
         });

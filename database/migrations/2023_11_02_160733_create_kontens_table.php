@@ -22,7 +22,14 @@ class CreateKontensTable extends Migration
 
             $table->primary('idVideo');
             $table->foreign('idKreator')->references('idKreator')->on('kreators');
+            $table->foreign('category_id')->references('id')->on('content_categories')->onDelete('set null'); // Tambahkan foreign key untuk kategori
+
         });
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(ContentCategory::class, 'category_id', 'id');
     }
 
     public function down()

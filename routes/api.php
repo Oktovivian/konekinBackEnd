@@ -38,3 +38,10 @@ Route::put('/kreator/{idKreator}/edit-profile', [KreatorController::class, 'edit
 Route::post('/kreator/{idKreator}/upload-cv', [KreatorController::class, 'uploadCV']);
 Route::get('/kreator/{idKreator}/show-profile', [KreatorController::class, 'showProfile']);
 
+// Route untuk kontenController
+Route::post('/create-content', [KontenController::class, 'createContent']);
+Route::put('/update-content/{id}', [KontenController::class, 'updateContent']);
+Route::delete('/delete-content/{id}', [KontenController::class, 'deleteContent']);
+Route::get('/show-content/{id}', [KontenController::class, 'showContent']);
+Route::get('/show-all-content', [KontenController::class, 'showAllContent']);
+
